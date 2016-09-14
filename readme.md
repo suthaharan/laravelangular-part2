@@ -1,3 +1,15 @@
+
+
+# SETUP Configuration 
+* Laravel Framework version 5.2.45
+* Composer 1.2.1 (stable channel)
+* PHP 5.5.9-1ubuntu4.19 (cli) (built: Jul 28 2016 19:31:33) 
+* PHP Group Zend Engine v2.5.0
+* Node v4.5.0
+* NPM 2.15.9
+* Bower 1.7.9
+
+
 # Laravel Assessment Application
 
 Welcome to the CAT Laravel Assessment application. This is designed to give us a sense of your skill set and give you a brief introduction to our workflow and technology stack.

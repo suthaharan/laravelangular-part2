@@ -10,6 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+URL::forceSchema('https');
 
 Route::get('/', 'MainController@index');
 Route::get('/instructions', 'MainController@instructions');
