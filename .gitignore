@@ -1,0 +1,12 @@
+/vendor
+/node_modules
+/public/storage
+Homestead.yaml
+Homestead.json
+bower_components
+.env
+.vagrant
+Vagrantfile
+public/css/*
+public/js/*
+public/build/*

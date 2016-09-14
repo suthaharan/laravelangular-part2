@@ -1,0 +1,13 @@
+#page-wrapper {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.instructions {
+    text-align: left;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
