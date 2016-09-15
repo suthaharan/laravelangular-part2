@@ -46,3 +46,33 @@ $ php artisan make:controller TempstoreController
 $ php artisan make:controller StockController 
 $ php artisan route:list
 ```
+
+###### Routes - Temperature Conversion, Stock Items 
+
+```
++--------+-----------+--------------------------------+-----------------------+-----------------------------------------------------+------------+
+| Domain | Method    | URI                            | Name                  | Action                                              | Middleware |
++--------+-----------+--------------------------------+-----------------------+-----------------------------------------------------+------------+
+|        | GET|HEAD  | /                              |                       | App\Http\Controllers\MainController@index           | web        |
+|        | POST      | api/stock*                     | api.stock.store       | App\Http\Controllers\StockController@store          | web        |
+|        | GET|HEAD  | api/stock                      | api.stock.index       | App\Http\Controllers\StockController@index          | web        |
+|        | GET|HEAD  | api/stock/create*              | api.stock.create      | App\Http\Controllers\StockController@create         | web        |
+|        | GET|HEAD  | api/stock/{stock}              | api.stock.show        | App\Http\Controllers\StockController@show           | web        |
+|        | PUT|PATCH | api/stock/{stock}              | api.stock.update      | App\Http\Controllers\StockController@update         | web        |
+|        | DELETE    | api/stock/{stock}*             | api.stock.destroy     | App\Http\Controllers\StockController@destroy        | web        |
+|        | GET|HEAD  | api/stock/{stock}/edit         | api.stock.edit        | App\Http\Controllers\StockController@edit           | web        |
+|        | POST      | api/tempstore*                 | api.tempstore.store   | App\Http\Controllers\TempstoreController@store      | web        |
+|        | GET|HEAD  | api/tempstore                  | api.tempstore.index   | App\Http\Controllers\TempstoreController@index      | web        |
+|        | GET|HEAD  | api/tempstore/create*          | api.tempstore.create  | App\Http\Controllers\TempstoreController@create     | web        |
+|        | GET|HEAD  | api/tempstore/{tempstore}      | api.tempstore.show    | App\Http\Controllers\TempstoreController@show       | web        |
+|        | DELETE    | api/tempstore/{tempstore}*     | api.tempstore.destroy | App\Http\Controllers\TempstoreController@destroy    | web        |
+|        | PUT|PATCH | api/tempstore/{tempstore}      | api.tempstore.update  | App\Http\Controllers\TempstoreController@update     | web        |
+|        | GET|HEAD  | api/tempstore/{tempstore}/edit | api.tempstore.edit    | App\Http\Controllers\TempstoreController@edit       | web        |
+|        | GET|HEAD  | instructions                   |                       | App\Http\Controllers\MainController@instructions    | web        |
+|        | GET|HEAD  | stock                          |                       | App\Http\Controllers\MainController@stock           | web        |
+|        | GET|HEAD  | temperaturecalc                |                       | App\Http\Controllers\MainController@temperaturecalc | web        |
++--------+-----------+--------------------------------+-----------------------+-----------------------------------------------------+------------+
+
+* - API's marked with * are only available at this time
+
+```

@@ -92,6 +92,13 @@
     		});
           };
           
+ 	    $scope.deleteTempstore = function(index) {
+    		var tempstore = $scope.tempstores[index];
+    		$http.delete('/api/tempstore/' + tempstore.id)
+    			.success(function() {
+    				$scope.tempstores.splice(index, 1);
+    			});;
+	    };         
           
         $scope.init = function() {
     		console.log("init");

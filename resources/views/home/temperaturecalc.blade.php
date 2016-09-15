@@ -57,11 +57,13 @@
 											<td>Factor</td>
 											<td>Fahrenheit</td></td>
 											<td>Celcius</td>
+											<td>Action</td>
 										</tr>				
 										<tr ng-repeat='tempstore in tempstores'>
 											<td><% tempstore.factor %></td>
 											<td><% tempstore.fahrenheit %></td>
 											<td><% tempstore.celcius %></td>
+											<td><button class="btn btn-danger btn-xs" ng-click="deleteTempstore($index)">  <span class="glyphicon glyphicon-trash" ></span></button></td>
 										</tr>
 									</table>
 								</div>

@@ -32,36 +32,13 @@ class TempstoreController extends Controller
 		return $tempstore;
 	}
 	
-		/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-  /*	public function store() {
-		$tempstore = Tempstore::create(Request::all());
-		return $tempstore;
-	}*/
- 
- 
-	/**
-	 * Return the specified resource using JSON
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		return Response::json(Tempstore::find($id));
-	}
-	/**
+    /**
 	 * Remove the specified resource from storage.
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
-	{
+	public function destroy($id) {
 		Tempstore::destroy($id);
-		return Response::json(array('success' => true));
-	}
+	}	
 }
