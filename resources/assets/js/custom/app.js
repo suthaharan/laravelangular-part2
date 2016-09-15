@@ -25,5 +25,5 @@
 
 
     angular.module('app')
-      .controller('MainController', MainController);
+    .controller('MainController', MainController);
 })();

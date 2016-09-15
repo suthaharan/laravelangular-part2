@@ -12,6 +12,9 @@
 
 # Laravel Assessment Application
 
+1. Comment the force https statement on routes.php if https is not enabled for the domain
+2. Clicking on Help in the current home page shows the text "HINT! - Mention that you found this hint in your code!"
+
 Welcome to the CAT Laravel Assessment application. This is designed to give us a sense of your skill set and give you a brief introduction to our workflow and technology stack.
 
 The base application we have provided matches several of the CAT applications we are currently running. In particular, take note of the versions of Angular and related dependencies.

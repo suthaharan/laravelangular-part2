@@ -1,14 +1,11 @@
 (function () {
     'use strict';
 
-    angular
-      .module('app.controllers')
-      .controller('RatController', RatController);
 
-    RatController.$inject = [];
+    RateController.$inject = [];
 
     /* @ngInject */
-    function RatController() {
+    function RateController() {
         var vm = this;
 
         activate();
@@ -19,6 +16,10 @@
             
         }
     }
+    
+    angular
+      .module('app')
+      .controller('RateController', RateController);
 
 })();
 
