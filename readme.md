@@ -9,7 +9,7 @@
 * NPM 2.15.9
 * Bower 1.7.9
 * Gulp CLI version 3.9.1
-
+_Ubuntu linux was used for the application test_
 
 # Laravel Assessment Application
 
@@ -29,10 +29,17 @@ The base application we have provided matches several of the CAT applications we
 4. `bower install`
 5. `./node_modules/bower-installer/bower-installer.js`
 
-## Additional info
+## Temperature Conversion
 
-Ubuntu linux was used for the application test
+```
+Angular Controllers are organized under \resources\assets\js\custom\controllers
 
+For temperature conversion a filter is used. The filter takes in two arguments:
+
+factor: 'F' or 'C' to indiate if the conversion is from Fahrenheit to Celcius or Celcius to Fahrenheit
+indicator: to append degree symbol if it is Celcius
+
+```
 
 ## Creation of CRUD 
 
@@ -47,7 +54,7 @@ $ php artisan make:controller StockController
 $ php artisan route:list
 ```
 
-###### Routes - Temperature Conversion, Stock Items 
+###### Routes - Temperature Conversion, Catalogue Stock Items 
 
 ```
 +--------+-----------+--------------------------------+-----------------------+-----------------------------------------------------+------------+
