@@ -37,7 +37,6 @@
     			'description': cDescription
     		}).success(function(data, status, headers, config) {
     			$scope.stocks.push(data);
-    			console.log("Temp = " +data);
     			$scope.stock = '';
     		});
     		
@@ -51,6 +50,17 @@
         			$scope.stocks = data;
         		});
 	    };
+	    
+	    
+	    $scope.deleteStock = function(index) {
+    		var stock = $scope.stocks[index];
+    		$http.delete('/api/stock/' + stock.id)
+    			.success(function() {
+    				$scope.stocks.splice(index, 1);
+    			});;
+	    };
+	
+	    
 	    
 	    $scope.init();
           

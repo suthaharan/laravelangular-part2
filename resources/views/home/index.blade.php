@@ -24,7 +24,7 @@
 </p>
 
 <p ng-cloak ng-if="vm.showHint">
-    @{{ vm.aHint }}
+    <% vm.aHint %>
 </p>
 
 @endsection

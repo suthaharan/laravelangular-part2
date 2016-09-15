@@ -51,9 +51,6 @@
 				            </div> 		                      
 				            </fieldset>
 				            </form>
-				            
-				            
-				            
 				            <div class="row">
 								<div class="col-md-12">
 									<table class="table table-striped">
@@ -62,12 +59,14 @@
 											<td>Item Name</td></td>
 											<td>Item Number</td>
 											<td>Price</td>
+											<td>Action</td>
 										</tr>				
 										<tr ng-repeat='stock in stocks'>
 											<td><% stock.category %></td>
 											<td><% stock.itemname %></td>
 											<td><% stock.itemnumber %></td>
 											<td><% stock.price %></td>
+											<td><button class="btn btn-danger btn-xs" ng-click="deleteStock($index)">  <span class="glyphicon glyphicon-trash" ></span></button></td>
 										</tr>
 									</table>
 								</div>

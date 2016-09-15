@@ -26,5 +26,15 @@ class StockController extends Controller
 		return $stock;
 	}
 	
+    /**
+	 * Remove the specified resource from storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function destroy($id) {
+		Stock::destroy($id);
+	}	
+	
 	
 }
