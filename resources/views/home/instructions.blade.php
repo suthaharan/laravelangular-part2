@@ -1,5 +1,9 @@
 @extends('layouts.inner')
 
+@section('content-header')
+        Instructions
+@endsection
+
 @section('content')
 
 <div class="instructions">

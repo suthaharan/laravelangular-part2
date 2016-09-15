@@ -14,3 +14,5 @@ URL::forceSchema('https');
 
 Route::get('/', 'MainController@index');
 Route::get('/instructions', 'MainController@instructions');
+Route::get('/stock', 'MainController@stock');
+Route::get('/temperaturecalc', 'MainController@temperaturecalc');

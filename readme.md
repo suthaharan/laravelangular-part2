@@ -8,25 +8,18 @@
 * Node v4.5.0
 * NPM 2.15.9
 * Bower 1.7.9
+* Gulp CLI version 3.9.1
 
 
 # Laravel Assessment Application
 
 1. Comment the force https statement on routes.php if https is not enabled for the domain
 2. Clicking on Help in the current home page shows the text "HINT! - Mention that you found this hint in your code!"
+3. A correction related to RateController was fixed inside js/custom/rate.js (angular controller)
 
 Welcome to the CAT Laravel Assessment application. This is designed to give us a sense of your skill set and give you a brief introduction to our workflow and technology stack.
 
 The base application we have provided matches several of the CAT applications we are currently running. In particular, take note of the versions of Angular and related dependencies.
-
-# Prerequisites
-
-* All Laravel Dependencies
-* PHP 5.5 or greater
-* Composer
-* Gulp
-* npm
-* bower
 
 # Installation
 
@@ -38,8 +31,4 @@ The base application we have provided matches several of the CAT applications we
 
 ## Additional info
 
-We've provided Homestead as a dev dependency, feel free to use Homestead or any other hosting solution to do your work.
-
-# The Assignment
-
-You will find your assignment in the `docs` folder.
+Ubuntu linux was used for the application test

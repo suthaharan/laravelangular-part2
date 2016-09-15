@@ -1,5 +1,10 @@
 @extends('layouts.inner')
 
+@section('content-header')
+        Exercise
+@endsection
+
+
 @section('content')
 
 <h1>Laravel Assessment Exercise!</h1>
