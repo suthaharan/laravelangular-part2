@@ -16,3 +16,6 @@ Route::get('/', 'MainController@index');
 Route::get('/instructions', 'MainController@instructions');
 Route::get('/stock', 'MainController@stock');
 Route::get('/temperaturecalc', 'MainController@temperaturecalc');
+
+Route::resource('api/tempstore','TempstoreController');
+Route::resource('api/stock','StockController');

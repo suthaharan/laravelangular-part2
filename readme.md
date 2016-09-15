@@ -32,3 +32,17 @@ The base application we have provided matches several of the CAT applications we
 ## Additional info
 
 Ubuntu linux was used for the application test
+
+
+## Creation of CRUD 
+
+```
+$ php artisan make:migration create_stock_table --table=stock
+$ php artisan make:migration create_tempstore_table --table=tempstore
+$ php artisan migrate
+$ php artisan make:model tempstore
+$ php artisan make:model stock
+$ php artisan make:controller TempstoreController 
+$ php artisan make:controller StockController 
+$ php artisan route:list
+```

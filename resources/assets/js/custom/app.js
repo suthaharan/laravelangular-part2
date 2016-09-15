@@ -5,8 +5,9 @@
       .module('app', [
           'ui.bootstrap',
           'app.controllers'
-      ]);
-
+      ], function($interpolateProvider) {$interpolateProvider.startSymbol('<%');$interpolateProvider.endSymbol('%>');}
+      );
+ 
     angular.module('app.controllers', []);
 
     MainController.$inject = ['$http'];

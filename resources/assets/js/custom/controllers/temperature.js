@@ -56,18 +56,56 @@
       .filter('formatTemperature', formatTemperatureFilter)
       .controller('TemperatureController', ['$scope', '$http', '$filter', function ($scope, $http, $filter) {
           
+    	  $scope.tempstores = [];
 
           $scope.addConversion = function(){ 
-              console.log("Factor = " + $scope.factor);
-              console.log("Temp = " + $scope.temp);
+             // console.log("Factor = " + $scope.factor);
+             // console.log("Temp = " + $scope.temp);
             var cFactor = $scope.factor;
             var cValue = $scope.temp;
-            $scope.convertedtemp = $filter('formatTemperature')(cValue, cFactor, true);
-          };          
+            var cCelcius = 0;
+            var cFahrenheit = 0;
+            var cConvertedvalue = 0;
+            
+            if(cFactor == 'F'){
+                cConvertedvalue = $filter('formatTemperature')(cValue, cFactor, true);
+                cFahrenheit = cValue;
+                cCelcius = cConvertedvalue;
+            }else{
+                cConvertedvalue = $filter('formatTemperature')(cValue, cFactor);
+                cCelcius = cValue+'\u00B0';
+                cFahrenheit = cConvertedvalue;
+            }
+
+            
+            $scope.convertedtemp = cConvertedvalue;
+            
+            $http.post('/api/tempstore', {
+                'factor': cFactor,
+    			'celcius': cCelcius,
+    			'fahrenheit': cFahrenheit,
+    			'convertedval': cConvertedvalue
+    		}).success(function(data, status, headers, config) {
+    			$scope.tempstores.push(data);
+    			// console.log("Temp = " +data);
+    			$scope.tempstore = '';
+    		});
+          };
+          
+          
+        $scope.init = function() {
+    		console.log("init");
+    		$http.get('/api/tempstore').
+        		success(function(data, status, headers, config) {
+        			$scope.tempstores = data;
+        		});
+	    };
+	    
+	    $scope.init();
           
           
         }]);
       
-      
+     
 
 })();

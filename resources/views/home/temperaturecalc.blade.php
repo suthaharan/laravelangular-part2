@@ -49,6 +49,31 @@
 				            </div> 		                      
 				            </fieldset>
 				            </form>
+			            
+							<div class="row">
+								<div class="col-md-12">
+									<table class="table table-striped">
+										<tr>
+											<td>Factor</td>
+											<td>Fahrenheit</td></td>
+											<td>Celcius</td>
+										</tr>				
+										<tr ng-repeat='tempstore in tempstores'>
+											<td><% tempstore.factor %></td>
+											<td><% tempstore.fahrenheit %></td>
+											<td><% tempstore.celcius %></td>
+										</tr>
+									</table>
+								</div>
+							</div>
+	
+	
+				            
+				            
+				            
+				            
+				            
+				            
 						</div> <!-- /.modal-body -->
 	</div>			
 				
