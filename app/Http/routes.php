@@ -13,8 +13,9 @@
 URL::forceSchema('https');
 
 Route::get('/', 'MainController@index');
+Route::get('/home', 'MainController@index');
 Route::get('/instructions', 'MainController@instructions');
-Route::get('/stock', 'MainController@stock');
+Route::get('/catalogue', 'MainController@catalogue');
 Route::get('/temperaturecalc', 'MainController@temperaturecalc');
 
 Route::resource('api/tempstore','TempstoreController');

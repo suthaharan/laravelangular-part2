@@ -25,9 +25,9 @@ class MainController extends Controller
         return view('home.instructions')->withInstructions($markdown);
     }
     
-    public function stock()
+    public function catalogue()
     {
-        return view('home.stock');
+        return view('home.catalogue');
     }
     
     public function temperaturecalc()

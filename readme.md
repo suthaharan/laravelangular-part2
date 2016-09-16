@@ -16,10 +16,9 @@ _Ubuntu linux was used for the application test_
 1. Comment the force https statement on routes.php if https is not enabled for the domain
 2. Clicking on Help in the current home page shows the text "HINT! - Mention that you found this hint in your code!"
 3. A correction related to RateController was fixed inside js/custom/rate.js (angular controller)
-
-Welcome to the CAT Laravel Assessment application. This is designed to give us a sense of your skill set and give you a brief introduction to our workflow and technology stack.
-
-The base application we have provided matches several of the CAT applications we are currently running. In particular, take note of the versions of Angular and related dependencies.
+4. Nested controller in blade layout template was removed
+5. Helper class added to manage active links in the left navigation
+6. Filter function in AngularJS written to handle the temperature conversion formula
 
 # Installation
 
@@ -75,8 +74,9 @@ $ php artisan route:list
 |        | DELETE    | api/tempstore/{tempstore}*     | api.tempstore.destroy | App\Http\Controllers\TempstoreController@destroy    | web        |
 |        | PUT|PATCH | api/tempstore/{tempstore}      | api.tempstore.update  | App\Http\Controllers\TempstoreController@update     | web        |
 |        | GET|HEAD  | api/tempstore/{tempstore}/edit | api.tempstore.edit    | App\Http\Controllers\TempstoreController@edit       | web        |
+|        | GET|HEAD  | catalogue                      |                       | App\Http\Controllers\MainController@catalogue       | web        |
+|        | GET|HEAD  | home                           |                       | App\Http\Controllers\MainController@index           | web        |
 |        | GET|HEAD  | instructions                   |                       | App\Http\Controllers\MainController@instructions    | web        |
-|        | GET|HEAD  | stock                          |                       | App\Http\Controllers\MainController@stock           | web        |
 |        | GET|HEAD  | temperaturecalc                |                       | App\Http\Controllers\MainController@temperaturecalc | web        |
 +--------+-----------+--------------------------------+-----------------------+-----------------------------------------------------+------------+
 

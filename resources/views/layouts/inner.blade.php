@@ -39,11 +39,11 @@
 	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 
 		<ul class="nav menu navadjust">
-			<li><a href="/"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg> Home</a></li>
-			<li><a href="/temperaturecalc"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Temperature Calc</a></li>
-			<li ><a href="/stock"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Stock</a></li>
-			<li role="presentation" class="divider"></li>
-			<li class="active"><a href="/instructions"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Instructions</a></li>
+			<li><a href="{{ SiteFuncs::set_active('home') }}"><a href="/home"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg> Home</a></li>
+			<li class="{{ SiteFuncs::set_active('instructions') }}"><a href="/instructions"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Instructions</a></li>	
+			<li role="presentation" class="divider"></li>			
+			<li class="{{ SiteFuncs::set_active('temperaturecalc') }}"><a href="/temperaturecalc"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Temperature Calc</a></li>
+			<li class="{{ SiteFuncs::set_active('catalogue') }}"><a href="/catalogue"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg> Stock</a></li>
 		</ul>
 
 	</div><!--/.sidebar-->
@@ -66,14 +66,12 @@
 				
 		<div class="row">
 			<div class="col-lg-12">				
-				<div class="panel panel-default">
-					<div class="panel-heading">Info</div>				
+				<div class="panel panel-default">				
                         <div id="wrapper">
                             <div id="page-wrapper" class="gray-bg">
                         
-                                <div ng-controller="MainController as vm" class="wrapper wrapper-content">
                                     @yield('content')
-                                </div>
+                                
                             </div>
                         </div>
                    </div>

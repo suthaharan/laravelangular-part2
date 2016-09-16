@@ -1,7 +1,7 @@
 @extends('layouts.inner')
 
 @section('content-header')
-        Stocks
+        Catalogue Stocks
 @endsection
 
 
@@ -13,6 +13,7 @@
 							<form class="form-horizontal" name="mystockform" data-ng-submit="addStock()">
 				            <fieldset>
 				            <!-- Form Name -->
+				            <legend>Manage Catalogue</legend>
 				            <!-- Text input-->
 				            <div class="form-group">
 				              <label class="col-md-4 control-label" for="itemcategory">Category</label>  
@@ -53,29 +54,33 @@
 				            </form>
 				            <div class="row">
 								<div class="col-md-12">
-									<table class="table table-striped">
-										<tr>
-											<td>Category</td>
-											<td>Item Name</td></td>
-											<td>Item Number</td>
-											<td>Price</td>
-											<td>Action</td>
-										</tr>				
-										<tr ng-repeat='stock in stocks'>
-											<td><% stock.category %></td>
-											<td><% stock.itemname %></td>
-											<td><% stock.itemnumber %></td>
-											<td><% stock.price %></td>
-											<td><button class="btn btn-danger btn-xs" ng-click="deleteStock($index)">  <span class="glyphicon glyphicon-trash" ></span></button></td>
-										</tr>
-									</table>
+									<div class="panel panel-default">
+										<div class="panel-heading">Catalogue List</div>
+										<div class="panel-body">
+											<table class="table table-striped">
+												<tr>
+													<td>Category</td>
+													<td>Item Name</td></td>
+													<td>Item Number</td>
+													<td>Price</td>
+													<td>Comments</td>
+													<td>Action</td>
+												</tr>				
+												<tr ng-repeat='stock in stocks'>
+													<td><% stock.category %></td>
+													<td><% stock.itemname %></td>
+													<td><% stock.itemnumber %></td>
+													<td><% stock.price %></td>
+													<td><% stock.description %></td>
+													<td><button class="btn btn-danger btn-xs" ng-click="deleteStock($index)">  <span class="glyphicon glyphicon-trash" ></span></button></td>
+												</tr>
+											</table>
+										</div>
+									</div>
 								</div>
 							</div>
-				            
-				            
-				            
 						</div> <!-- /.modal-body -->
-	</div>			
+					</div>			
 				
 				
 
