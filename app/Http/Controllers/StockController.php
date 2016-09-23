@@ -26,6 +26,23 @@ class StockController extends Controller
 		return $stock;
 	}
 	
+	
+	
+	/**
+	 * Update the specified resource in storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function update($id) {
+		$stock = Stock::find($id);
+		$stock->done = Request::input('done');
+		$stock->save();
+ 
+		return $stock;
+	}
+	
+	
     /**
 	 * Remove the specified resource from storage.
 	 *

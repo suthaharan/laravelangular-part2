@@ -32,6 +32,20 @@ class TempstoreController extends Controller
 		return $tempstore;
 	}
 	
+	/**
+	 * Update the specified resource in storage.
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function update($id) {
+		$tempstore = Tempstore::find($id);
+		$tempstore->done = Request::input('done');
+		$tempstore->save();
+ 
+		return $tempstore;
+	}
+	
     /**
 	 * Remove the specified resource from storage.
 	 *
